@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Card/Card Info")]
 public class CardInfo : ScriptableObject
 {
-    public string Name;
+    public string Name = "Card";
+    [TextArea]
+    public string Text = "Does a thing";
+
+    public Rarity Rarity;
+
+    public string ID;
+
+    public Sprite Art;
 
     public List<Keyword> Keywords;
     public Region Region;
 
-    public int ManaCost;
-    public int Attack;
-    public int Health;
+    public int ManaCost = 1;
 }
